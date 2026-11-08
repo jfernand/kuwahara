@@ -1,0 +1,17 @@
+[package]
+name = "kuwahara"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Kuwahara filters for painterly image abstraction: classic, generalized and anisotropic (Kyprianidis et al. 2009)"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/jfernand/kuwahara"
+readme = "README.md"
+keywords = ["kuwahara", "npr", "painterly", "image-filter", "abstraction"]
+categories = ["graphics", "multimedia::images", "rendering"]
+include = ["src/**", "examples/**", "README.md", "LICENSE-*"]
+
+[dependencies]
+
+[dev-dependencies]
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
