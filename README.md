@@ -3,7 +3,7 @@
 Kuwahara filters in Rust: edge-preserving smoothing that turns photographs into flat, painterly
 patches of colour.
 
-![A detail of Kodak's parrot photograph: the original, then the classic, generalized and anisotropic filters, and the anisotropic filter applied three times](images/compare.png)
+![A detail of Kodak's parrot photograph: the original, then the classic, generalized and anisotropic filters, and the anisotropic filter applied three times](https://raw.githubusercontent.com/jfernand/kuwahara/main/images/compare.png)
 
 *Left to right: original, classic, generalized, anisotropic, anisotropic three times.*
 
@@ -20,7 +20,7 @@ patches of colour.
   Papari, Petkov and Campisi, *Artistic Edge and Corner Enhancing Smoothing* (IEEE TIP 2007).
 - Two sector weightings: the 2009 paper's, a sector convolved with a Gaussian and sampled into a
   table, and the polynomial weights of Kyprianidis, Semmo, Kang and Döllner,
-  [*Anisotropic Kuwahara Filtering with Polynomial Weighting Functions*](https://www.kyprianidis.com/p/eguk2010/)
+  [*Anisotropic Kuwahara Filtering with Polynomial Weighting Functions*](https://doi.org/10.2312/LocalChapterEvents/TPCG/TPCG10/025-030)
   (EG UK TPCG 2010), which look the same and are faster (the default).
 
 No dependencies. The filters read and write an `Image` of `f32` RGB; rows are filtered in
@@ -61,6 +61,11 @@ for unrestricted use.
 | `sectors` | 8 | Number of sectors `N`. |
 | `scale` | 255 | The papers' weights assume channels in `0..=255`; deviations are scaled by this. |
 | `weighting` | `Polynomial` | `Convolved` (2009) or `Polynomial` (2010, with optional `zeta`, `eta`). |
+
+## Papers
+
+The papers are listed in [`docs/`](docs/README.md); Kyprianidis's dissertation, which covers the
+filter in full, is included there under its own Creative Commons licence.
 
 ## Licence
 
