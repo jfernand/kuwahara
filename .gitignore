@@ -1,6 +1,8 @@
 /target
 /out
 Cargo.lock
-# The papers (docs/) are copyrighted: keep them out of the repository.
-/docs/
+# Papers in docs/ are copyrighted unless docs/README.md says otherwise: only those are kept.
+/docs/*
+!/docs/README.md
+!/docs/kyprianidis-2013-phd-thesis-structure-adaptive-stylization.pdf
 /.idea/
